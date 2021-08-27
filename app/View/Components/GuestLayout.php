@@ -5,7 +5,20 @@ namespace App\View\Components;
 use Illuminate\View\Component;
 
 class GuestLayout extends Component
+
 {
+    public $class;
+
+    /**
+     * Get the view / contents that represents the component.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function __construct($class = '')
+    {
+        $this->class = $class;
+    }
+    
     /**
      * Get the view / contents that represents the component.
      *

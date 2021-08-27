@@ -8,7 +8,7 @@
     <section class="my-12 container max-w-5xl mx-auto">
 
         @if ($blogs->count())
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 @foreach ($blogs as $blog)
                     <a href="{{ route('blog.show', $blog->slug) }}" class="duration-300 hover:shadow-lg overflow-hidden rounded-lg shadow-md transition duration-300 cursor-pointer">
 
@@ -29,7 +29,7 @@
         @else
             <div class="text-3xl font-bold text-center">
                 <div>
-                    <img class="max-w-md mx-auto mb-5" src="{{asset('storage/icons/blog.svg')}}" alt="Amazon PPC Management Agency">
+                    <img class="max-w-md mx-auto mb-5" src="{{asset('storage/icons/blog.svg')}}" alt="No Blogs">
                 </div>
                 <div>No Blogs Yet</div>
             </div>

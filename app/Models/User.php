@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
@@ -56,7 +57,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $appends = [
-        'profile_photo_url',
+        'profile_photo_url', 'alias',
     ];
 
     protected $roles = [
@@ -92,6 +93,23 @@ class User extends Authenticatable
         $userHasRole = in_array($role, $userAvailableRoles);
 
         return $userHasRole;
+    }
+
+    public function getProfilePhotoUrlAttribute()
+    {
+        return $this->profile_photo_path
+            ? '/storage/' .  $this->profile_photo_path
+            : asset('storage/icons/avatar.svg');
+    }
+
+    public function getAliasAttribute()
+    {
+        $name = explode(' ', $this->name);
+        $alias = $name[0];
+        if(!empty($name[1])){
+            $alias = $alias . " " . substr($name[1],0,1) .'.';
+        }
+        return Str::title($alias);
     }
 
 }

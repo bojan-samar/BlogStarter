@@ -49,7 +49,7 @@
 
         @stack('scripts')
         @livewireScripts
-
+        @livewire('alert')
     </body>
 
 </html>
