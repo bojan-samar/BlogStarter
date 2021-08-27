@@ -1,8 +1,7 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Profile') }}
-        </h2>
+    <x-slot name="meta">
+        <title>Profile Edit</title>
+        <meta name="description" content="Edit Your Profile">
     </x-slot>
 
     <div>

@@ -1,4 +1,11 @@
 <x-guest-layout>
+
+    <x-slot name="meta">
+        <title>Reset Password</title>
+        <meta name="description" content="Reset Password">
+    </x-slot>
+
+
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />

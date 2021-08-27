@@ -1,8 +1,8 @@
 <x-app-layout>
 
     <x-slot name="meta">
-        <title>Bojan</title>
-        <meta name="description" content="Meta Description">
+        <title>Dashboard</title>
+        <meta name="description" content="Dashboard">
     </x-slot>
 
 

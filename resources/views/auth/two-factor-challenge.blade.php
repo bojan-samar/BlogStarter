@@ -1,4 +1,10 @@
 <x-guest-layout>
+
+    <x-slot name="meta">
+        <title>Two Factor Authentication</title>
+        <meta name="description" content="Two Factor Authentication">
+    </x-slot>
+
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />

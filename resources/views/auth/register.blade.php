@@ -1,4 +1,10 @@
 <x-guest-layout>
+
+    <x-slot name="meta">
+        <title>Register</title>
+        <meta name="description" content="Register">
+    </x-slot>
+
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
