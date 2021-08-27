@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <x-slot name="metaa">
+    <x-slot name="meta">
         <title>Blogs - {{ config('app.name') }}</title>
         <meta name="description" content="Blogs - {{ config('app.name') }}">
     </x-slot>
