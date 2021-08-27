@@ -38,7 +38,7 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="{{ $class }}">
                 {{ $slot }}
             </main>
         </div>

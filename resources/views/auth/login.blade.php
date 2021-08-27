@@ -50,5 +50,10 @@
                 </x-jet-button>
             </div>
         </form>
+
+        <div class="text-center mt-5 underline">
+            <a href="/register">Register New Account</a>
+        </div>
+
     </x-jet-authentication-card>
 </x-guest-layout>

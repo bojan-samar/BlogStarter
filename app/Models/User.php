@@ -58,4 +58,40 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    protected $roles = [
+        'superadmin',
+        'admin',
+        'editor',
+        'subscriber'
+    ];
+
+    public static function boot()
+    {
+        parent::boot();
+        static::creating(function($user){
+            $user->role = 'subscriber';
+        });
+    }
+
+    public function hasRole($role){
+        //CHECK IF ROLE REQUESTED EXISTS
+        if (! in_array($role, $this->roles)){
+            return false;
+        }
+
+        //CHECK IF USER ROLE EXISTS
+        $userRoleExists = array_search($this->role, $this->roles);
+
+
+        if ($userRoleExists === false){
+            return false;
+        }
+
+        $userAvailableRoles = array_slice($this->roles, $userRoleExists);
+        $userHasRole = in_array($role, $userAvailableRoles);
+
+        return $userHasRole;
+    }
+
 }
