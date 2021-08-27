@@ -5,7 +5,7 @@
         <meta name="description" content="Dashboard">
     </x-slot>
 
-    Mici
+    Boris
 
 
     <div class="py-12">
