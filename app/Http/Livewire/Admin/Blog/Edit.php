@@ -14,6 +14,15 @@ class Edit extends Component
     public $confirmingDeletion = false;
     public $photo;
 
+    protected $validationAttributes = [
+        'blog.title' => 'title',
+        'blog.slug' => 'slug',
+        'blog.meta' => 'meta',
+        'blog.notes' => 'notes',
+        'blog.body' => 'body',
+        'blog.status' => 'status',
+    ];
+
     function deletePhoto(){
         Storage::disk('public')->delete($this->blog['photo']);
         $this->blog['photo'] = null;

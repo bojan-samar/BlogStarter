@@ -22,9 +22,24 @@ class Create extends Component
         'status' => false,
     ];
 
+    protected $validationAttributes = [
+        'blog.title' => 'title',
+        'blog.slug' => 'slug',
+        'blog.meta' => 'meta',
+        'blog.notes' => 'notes',
+        'blog.body' => 'body',
+        'blog.status' => 'status',
+    ];
 
     public function store()
     {
+        $this->validate([
+            'blog.title' => 'required|string|min:5|max:191',
+            'blog.slug' => 'required|string',
+            'blog.meta' => 'required|string|min:5|max:191',
+            'blog.body' => 'required|string|min:5',
+        ]);
+
         if ($this->photo){
             $this->blog['photo'] = $this->photo->storePublicly('blog', ['disk' => 'public']);
         }
