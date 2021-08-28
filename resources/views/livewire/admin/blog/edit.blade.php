@@ -102,9 +102,11 @@
 
 
                     <!-- Current Profile Photo -->
+                    @if($blog['photo'])
                         <div class="mt-2" x-show="! photoPreview">
                             <img src="{{ Storage::url($blog['photo']) }}" alt="{{ $blog['title'] }}" class="rounded-full h-20 w-20 object-cover">
                         </div>
+                    @endif
 
 
                 <!-- New Profile Photo Preview -->
@@ -114,7 +116,7 @@
                     </span>
                     </div>
 
-                    <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
+                    <x-jet-secondary-button class="mt-5 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
                         {{ __('Select A New Photo') }}
                     </x-jet-secondary-button>
 
