@@ -1,9 +1,16 @@
 @if ($comment)
 <div class="mb-5">
 
-    <x-forum.author :user="$comment->user">
-        {{ $comment->created_at->diffForHumans() }}
-    </x-forum.author>
+    <div class="flex items-center mb-2">
+        <div>
+            <img class="h-12 w-12 rounded-full" src="{{ $comment->user['profile_photo_url'] }}" alt="{{ $comment->user['name'] }}">
+        </div>
+        <div class="text-xs ml-3">
+            <span>{{ $comment->user['alias'] }}</span>
+            <span class="text-gray-400"> | {{ $comment->created_at->diffForHumans() }}</span>
+        </div>
+    </div>
+
 
     {{--Edit Comment--}}
     @if($isEditing)

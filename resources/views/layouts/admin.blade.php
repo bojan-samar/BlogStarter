@@ -16,7 +16,6 @@
 
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="{{ asset('js/custom.js') }}" defer></script>
-    {{-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> --}}
     @livewireStyles
 
     <!-- Page Meta -->
@@ -33,16 +32,16 @@
 
             <x-admin.layouts.sidebar></x-admin.layouts.sidebar>
 
-            <div class="flex-1 flex-col relative z-0 overflow-y-auto">
+            <div class="flex-1 flex-col relative z-0 overflow-y-auto pb-8">
 
                 <x-admin.layouts.header></x-admin.layouts.header>
 
                 <div class="py-8 bg-gray-100 rounded-xl m-1 md:mx-4" style="min-height: 88%;border-radius: 0.8rem;">
-                    <div class="px-2 md:container mx-auto {{ $class }}">
+                    <div class="px-2 md:px-10 md:container mx-auto {{ $class }}">
                         {{ $slot }}
                     </div>
                 </div>
-                
+
             </div>
 
         </div>

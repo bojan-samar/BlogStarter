@@ -20,6 +20,7 @@ class CreateBlogsTable extends Migration
             $table->text('meta')->nullable();
             $table->text('body')->nullable();
             $table->text('notes')->nullable();
+            $table->string('photo', 2048)->nullable();
             $table->unsignedTinyInteger('status')->default(0);
             $table->timestamps();
         });

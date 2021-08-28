@@ -2,8 +2,9 @@
     <div class="container mx-auto">
         <div class="card bg-white">
 
-            @forelse($comments as $comment)
-                <div class="font-bold mb-5">Comments</div>
+        <div class="font-black tracking-wider mb-5 uppercase text-base">Comments</div>
+
+        @forelse($comments as $comment)
                 @livewire('comment.comment', ['comment' => $comment], key($comment->id))
 
                 <div class="ml-14">
