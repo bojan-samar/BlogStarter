@@ -22,7 +22,7 @@
     <section class="gradient-primary -mt-20">
 
         <div class="max-w-5xl mx-auto px-4 pt-24">
-            <h1 class="text-white text-4xl font-black tracking-wider text-center mt-8">Top job board for blockchain and cryptocurrency jobs.</h1>
+            <h1 class="text-white text-4xl font-black tracking-wider text-center mt-8">Title of your homepage</h1>
             <div class="flex justify-center mt-8">
                 <a class="no-underline" href="">
                     <button type="button" class="inline-flex items-center px-4 py-3 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition p-9">
