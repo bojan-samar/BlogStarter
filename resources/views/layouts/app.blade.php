@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600,900&display=swap">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -15,6 +15,7 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <x-layout.script></x-layout.script>
 
         <!-- Page Meta -->
         @if (isset($meta))
@@ -39,10 +40,12 @@
 
             <!-- Page Content -->
             <main class="{{ $class }}">
+                <x-alert></x-alert>
                 {{ $slot }}
             </main>
         </div>
 
+        @stack('scripts')
         @stack('modals')
         @livewireScripts
         @livewire('alert')

@@ -5,13 +5,13 @@
         <meta name="description" content="Blogs - {{ config('app.name') }}">
     </x-slot>
 
-    <section class="my-12 container max-w-5xl mx-auto">
+    <section class="my-12 container max-w-5xl mx-auto px-5">
 
         @if ($blogs->count())
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 @foreach ($blogs as $blog)
-                    <a href="{{ route('blog.show', $blog->slug) }}" class="duration-300 bg-white hover:shadow-lg overflow-hidden rounded-lg shadow-md transition duration-300 cursor-pointer">
+                    <a href="{{ route('blog.show', $blog->slug) }}" class="duration-300 bg-white hover:shadow-lg overflow-hidden rounded-2xl shadow-md transition duration-300 cursor-pointer">
 
                         @if($blog->photo)
                             <div><img class="max-h-60 mx-auto" src="{{ \Illuminate\Support\Facades\Storage::url($blog->photo) }}" alt="{{ $blog->title }}"></div>

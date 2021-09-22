@@ -22,6 +22,7 @@
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased {{ $class }}">
+            <x-alert></x-alert>
             {{ $slot }}
         </div>
     </body>

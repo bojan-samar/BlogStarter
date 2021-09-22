@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // })->name('welcome');
 
-Route::get('/', [App\Http\Controllers\BlogController::class, 'index'])->name('welcome');
 
-
+Route::view('/', 'welcome')->name('welcome');
+Route::view('contact', 'misc.contact')->name('contact');
 Route::get('blog/{blog}', [App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
 Route::get('blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
 
