@@ -38,7 +38,7 @@
 
                 <div class="bg-gray-100 rounded-xl m-1 md:mx-4 overflow-hidden" style="min-height: 88%;border-radius: 0.8rem;">
                     <x-alert></x-alert>
-                    <div class="py-8 px-2 md:px-10 md:container mx-auto {{ $class }}">
+                    <div class="py-8 px-4 md:px-10 md:container mx-auto {{ $class }}">
                         {{ $slot }}
                     </div>
                 </div>
