@@ -1,8 +1,8 @@
 <x-app-layout>
 
     <x-slot name="meta">
-        <title>Top Crypto Job Board</title>
-        <meta name="description" content="Job board for blockchain and cryptocurrency jobs. Blockchain jobs, Bitcoin jobs, Ethereum jobs. Updated daily.">
+        <title>Blog Template</title>
+        <meta name="description" content="Blog Tempalte">
         <style>
             #nav-desktop-links a {
                 color: #FFFFFF !important;
@@ -26,13 +26,13 @@
             <div class="flex justify-center mt-8">
                 <a class="no-underline" href="">
                     <button type="button" class="inline-flex items-center px-4 py-3 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition p-9">
-                        Post Job
+                        Button 1
                     </button>
                 </a>
 
                 <a class="no-underline" href="">
                     <button type="button" class="inline-flex items-center px-4 py-3 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:text-gray-800 active:bg-gray-50 disabled:opacity-25 transition ml-5">
-                        Find a Job
+                        Button 2
                     </button>
                 </a>
             </div>
@@ -64,7 +64,15 @@
 
     <section class="bg-white">
         <div class="container max-w-3xl mx-auto py-8 px-4 text-xl">
-            We scour the web and find the best crypto jobs on the market so that you don't have to waste your time. Jobs are posted daily so let's find your next career.
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam minus nulla quidem quod recusandae reiciendis vero. Deserunt enim eos, et id ipsam laborum laudantium magnam magni maxime nemo omnis repellat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et natus reiciendis voluptatibus. Accusamus ad aut earum esse ex ipsam laborum officia quae quos repudiandae similique soluta, totam voluptatem voluptates.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa eaque eius esse, et explicabo fugit, molestias nam non nulla odit placeat quia quisquam quos rem tempora totam veritatis voluptatum.
+            </p>
         </div>
     </section>
 

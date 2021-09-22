@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+p{
+    @apply mb-3;
+}
+
 .card{
     @apply shadow-sm p-4 rounded-lg;
 }
